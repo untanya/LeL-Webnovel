@@ -9,7 +9,7 @@ $(function() {
         event.preventDefault(); // prevent default submit behaviour
         // get values from FORM
         var name = $("input#name").val();
-        var password = $("input#phone").val();
+        var password = $("input#password").val();
         var firstName = name; // For Success/Failure Message
         // Check for white space in name for Success/Fail message
         if (firstName.indexOf(' ') >= 0) {

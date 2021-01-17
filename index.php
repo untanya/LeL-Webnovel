@@ -47,9 +47,9 @@
           <li class="nav-item">
             <a class="nav-link" href="contact.php">Contact</a>
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a class="nav-link" href="login.php">Connection</a>
-          </li>
+          </li> -->
         </ul>
       </div>
     </div>
@@ -77,59 +77,59 @@
         <div class="post-preview">
           <a href="post.html">
             <h2 class="post-title">
-              Man must explore, and this is exploration at its greatest
+              Lorem ipsum 
             </h2>
             <h3 class="post-subtitle">
-              Problems look mighty small from 150 miles up
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. 
             </h3>
           </a>
           <p class="post-meta">Posted by
-            <a href="#">Start Bootstrap</a>
+            <a href="#">Mouais</a>
             on September 24, 2019</p>
         </div>
         <hr>
         <div class="post-preview">
           <a href="post.html">
             <h2 class="post-title">
-              I believe every human has a finite number of heartbeats. I don't intend to waste any of mine.
+              Lorem ipsum
             </h2>
           </a>
           <p class="post-meta">Posted by
-            <a href="#">Start Bootstrap</a>
+            <a href="#">Mouais</a>
             on September 18, 2019</p>
         </div>
         <hr>
         <div class="post-preview">
           <a href="post.html">
             <h2 class="post-title">
-              Science has not yet mastered prophecy
+              Lorem ipsum
             </h2>
             <h3 class="post-subtitle">
-              We predict too much for the next year and yet far too little for the next ten.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. 
             </h3>
           </a>
           <p class="post-meta">Posted by
-            <a href="#">Start Bootstrap</a>
+            <a href="#">Mouais</a>
             on August 24, 2019</p>
         </div>
         <hr>
         <div class="post-preview">
           <a href="post.html">
             <h2 class="post-title">
-              Failure is not an option
+              Lorem ipsum
             </h2>
             <h3 class="post-subtitle">
-              Many say exploration is part of our destiny, but it’s actually our duty to future generations.
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
             </h3>
           </a>
           <p class="post-meta">Posted by
-            <a href="#">Start Bootstrap</a>
+            <a href="#">Mouais</a>
             on July 8, 2019</p>
         </div>
         <hr>
         <!-- Pager -->
         <div class="clearfix">
-          <a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a>
+          <a class="btn btn-primary float-right" href="#">Anciens articles &rarr;</a>
         </div>
       </div>
     </div>

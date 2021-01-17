@@ -76,16 +76,18 @@
         <!-- To use the contact form, your site must be on a live web host with PHP! The form will not work locally! -->
         <div id="container">
             <!-- zone de connexion -->
-            <form action="verification.php" method="POST">
+            <!-- <form action="verification.php" method="POST"> -->
+            <form method="POST">
                 <h1>Connexion</h1>
                 
                 <label><b>Nom d'utilisateur</b></label>
-                <input type="text" placeholder="Entrer le nom d'utilisateur" name="username" required>
+                <input type="text" placeholder="Entrer le nom d'utilisateur" name="username" id="username" required>
 
                 <label><b>Mot de passe</b></label>
-                <input type="password" placeholder="Entrer le mot de passe" name="password" required>
+                <input type="password" placeholder="Entrer le mot de passe" name="password" id="password" required>
 
                 <input type="submit" id='submit' value='LOGIN' >
+                
                 <?php
                 if(isset($_GET['erreur'])){
                     $err = $_GET['erreur'];
@@ -93,23 +95,42 @@
                         echo "<p style='color:red'>Utilisateur ou mot de passe incorrect</p>";
                 }
                 ?>
+                <!-- <label>Si vous n'avez pas de compte, cliqué ici : <a href="/signin.php">Créer votre compte</a></label> -->
             </form>
+            <!-- <?php
+                if(isset($_POST['submit'])){
+                  
+                  extract($_POST);
+
+                  if(!empty($password) && !empty($password)) {
+                    echo $password;
+                    
+                    $options = [
+                      'cost' => 12,
+                    ];
+                    
+                    $hashpass = password_hash($password, PASSWORD_BCRYPT, $options);
+                    
+                    include 'database.php';
+                    global $db;
+
+                    $q = $db->prepare("INSERT INTO users(pseudo, email, password) VALUES (:pseudo, :email, :password)");
+                    $q->execute([
+                      'pseudo' => 'test21',
+                      'email' => 'test12324@gmail.com',
+                      'password' => $hashpass
+                    ]);
+                }
+                  
+                }
+            ?> -->
+
         </div>
       </div>
     </div>
   </div>
 
   <hr>
-
-  <!-- <?php
-    include 'database.php';
-    global $db;
-
-    $q = $db->query("SELECT * FROM users");
-    while ($user = $q->fetch()) {
-        echo "pseudo : " . $user['pseudo'] . "<br/>";
-    }
-  ?> -->
 
   <!-- Footer -->
   <footer>

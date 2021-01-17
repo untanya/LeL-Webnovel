@@ -5,8 +5,9 @@
  */
  body{
      font-size:20px;
-     color:#212529;
-     font-family:Lora,'Times New Roman',serif
+     color:#f8f8ffe3;
+     font-family:Lora,'Times New Roman',serif;
+     background: #1c1c1c
     }
 
 #container{
@@ -20,13 +21,13 @@ form {
     width:100%;
     padding: 30px;
     border: 1px solid #1c1c1c;
-    background: white;
+    background: #1c1c1c;
      box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
 #container h1{
     width: auto;
     margin: 0 auto;
-    padding-inline-start: 57px;
+    padding-inline-start: 60px;
     padding-bottom: 10px;
 
 }
@@ -37,14 +38,15 @@ form {
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
-    border: 1px solid #ccc;
+    border: 1px solid #343a40;
+    background: #212529;
     box-sizing: border-box;
 }
       
 /* Set a style for all buttons */
     input[type=submit] {
     background-color: #53af57;
-    color: white;
+    color: #212529;
     padding: 14px 20px;
     margin: 8px 0;
     border: none;
@@ -52,9 +54,21 @@ form {
     width: 100%;
 }
     input[type=submit]:hover {
-    background-color:white;
-    color: white;
+    background-color:#1c1c1c;
+    color: #212529;
     border: 1px solid #1c1c1c;
+}
+
+img{
+    background-image: url('../img/IoHSn9Z.png');
+    position:absolute;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+    background-color:#212529;
+    opacity:.5
+    
 }
 
 p{
@@ -72,7 +86,7 @@ h1,h2,h3,h4,h5,h6{
 }
 
 a{
-    color:#212529;
+    color:white;
     transition:all .2s
 }
 
@@ -116,17 +130,17 @@ blockquote{
 }#mainNav{
     position:absolute;
     border-bottom:1px solid #e9ecef;
-    background-color:#fff;
+    background-color:#1c1c1c;
     font-family:'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif
 }#mainNav .navbar-brand{
     font-weight:800;
-    color:#343a40
+    color:#fff
 }#mainNav .navbar-toggler{
     font-size:12px;
     font-weight:800;
     padding:13px;
     text-transform:uppercase;
-    color:#343a40
+    color:#fff
 }#mainNav .navbar-nav>li.nav-item>a{
     font-size:12px;
     font-weight:800;
@@ -135,21 +149,21 @@ blockquote{
 }@media only screen and (min-width:992px){
     #mainNav{
         border-bottom:1px solid transparent;
-        background:0 0
+        background: #1c1c1c
     }#mainNav .navbar-brand{
         padding:10px 20px;
         color:#fff
     }#mainNav .navbar-brand:focus,#mainNav .navbar-brand:hover{
-        color:rgba(255,255,255,.8)
+        color:#0085a1
     }#mainNav .navbar-nav>li.nav-item>a{
         padding:10px 20px;
         color:#fff
     }#mainNav .navbar-nav>li.nav-item>a:focus,#mainNav .navbar-nav>li.nav-item>a:hover{
-        color:rgba(255,255,255,.8)
+        color:#0085a1
     }
 }@media only screen and (min-width:992px){
     #mainNav{
-        transition:background-color .2s;
+        transition: background-color .2s;
         transform:translate3d(0,0,0);
         -webkit-backface-visibility:hidden;
         backface-visibility:hidden
@@ -157,14 +171,14 @@ blockquote{
         position:fixed;
         top:-67px;
         transition:transform .2s;
-        border-bottom:1px solid #fff;
-        background-color:rgba(255,255,255,.9)
+        border-bottom:1px solid #0085a1;
+        background-color:#1c1c1c
     }#mainNav.is-fixed .navbar-brand{
-        color:#212529
+        color:#fff
     }#mainNav.is-fixed .navbar-brand:focus,#mainNav.is-fixed .navbar-brand:hover{
         color:#0085a1
     }#mainNav.is-fixed .navbar-nav>li.nav-item>a{
-        color:#212529
+        color:#fff
     }#mainNav.is-fixed .navbar-nav>li.nav-item>a:focus,#mainNav.is-fixed .navbar-nav>li.nav-item>a:hover{
         color:#0085a1
     }#mainNav.is-visible{
@@ -230,7 +244,7 @@ blockquote{
         font-size:30px
     }
 }.post-preview>a{
-    color:#212529
+    color:#ccc
 }.post-preview>a:focus,.post-preview>a:hover{
     text-decoration:none;
     color:#0085a1
@@ -248,7 +262,7 @@ blockquote{
     color:#868e96
 }.post-preview>.post-meta>a{
     text-decoration:none;
-    color:#212529
+    color: #00657b
 }.post-preview>.post-meta>a:focus,.post-preview>.post-meta>a:hover{
     text-decoration:underline;
     color:#0085a1
@@ -256,7 +270,8 @@ blockquote{
     .post-preview>a>.post-title{
         font-size:36px
     }
-}.floating-label-form-group{
+}.floating-label-form-group{ 
+    /* Relatif à la page de Contact */
     font-size:14px;
     position:relative;
     margin-bottom:0;
@@ -310,12 +325,13 @@ blockquote{
     letter-spacing:1px;
     text-transform:uppercase;
     border-radius:0;
-    font-family:'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif
+    font-family:'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+    background: black
 }.btn-primary{
     background-color:#0085a1;
     border-color:#0085a1
 }.btn-primary:active,.btn-primary:focus,.btn-primary:hover{
-    color:#fff;
+    color: black;
     background-color:#00657b!important;
     border-color:#00657b!important
 }.btn-lg{
