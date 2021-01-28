@@ -1,4 +1,8 @@
-<?php session_start(); ?>
+<?php 
+    session_start();
+    if(!isset($_SESSION['user']))
+        header('Location: ../form/form.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -29,7 +33,7 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
     <div class="container">
-      <a class="navbar-brand" href="../AdminInterface.php">Admin Interface</a>
+      <a class="navbar-brand" href="AdminInterface.php">Admin Interface</a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         Menu
         <i class="fas fa-bars"></i>
@@ -48,10 +52,16 @@
           <li class="nav-item">
             <a class="nav-link" href="../index.php">Retour</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../form/deconnexion.php">Déconnexion</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="member.php"><?php echo $_SESSION['user']?></a>
+          </li>
         </ul>
       </div>
     </div>
   </nav>
 
   <!-- Page Header -->
-  <img class="background" src="img/IoHSn9Z.png">
+  <img class="background" src="../img/IoHSn9Z.png">

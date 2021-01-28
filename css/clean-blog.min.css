@@ -15,49 +15,6 @@
     margin:0 auto;
     margin-top:10%;
 }
-      
-/* Bordered form */
-form {
-    width:100%;
-    padding: 30px;
-    border: 1px solid #1c1c1c;
-    background: #1c1c1c;
-     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-}
-#container h1{
-    width: auto;
-    margin: 0 auto;
-    padding-inline-start: 60px;
-    padding-bottom: 10px;
-
-}
-      
-/* Full-width inputs */
-    input[type=text], input[type=password] {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #343a40;
-    background: #212529;
-    box-sizing: border-box;
-}
-      
-/* Set a style for all buttons */
-    input[type=submit] {
-    background-color: #53af57;
-    color: #212529;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-}
-    input[type=submit]:hover {
-    background-color:#1c1c1c;
-    color: #212529;
-    border: 1px solid #1c1c1c;
-}
 
 img{
     background-image: url('../img/IoHSn9Z.png');
@@ -69,6 +26,9 @@ img{
     background-color:#212529;
     opacity:.5
     
+}
+h1.p-5 {
+    margin: 70px;
 }
 
 p{
@@ -336,5 +296,6 @@ blockquote{
     border-color:#00657b!important
 }.btn-lg{
     font-size:16px;
-    padding:25px 35px
+    padding:25px 35px;
+    color: #fff;
 }

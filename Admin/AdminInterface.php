@@ -1,4 +1,9 @@
-<?php session_start(); ?>
+<?php 
+    session_start();
+    if(!isset($_SESSION['user']))
+        header('Location: ../form/form.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,15 +17,15 @@
   <title>Webreader</title>
 
   <!-- Bootstrap core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Custom fonts for this template -->
-  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 
   <!-- Custom styles for this template -->
-  <link href="css/clean-blog.min.css" rel="stylesheet">
+  <link href="../css/clean-blog.min.css" rel="stylesheet">
 
 </head>
 
@@ -37,21 +42,28 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="Admin/data.php">Database</a>
+            <a class="nav-link" href="data.php">Database</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="Admin/Input_Output.php">Chapitres</a>
+            <a class="nav-link" href="Input_Output.php">Chapitres</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="Admin/post.php">Articles</a>
+            <a class="nav-link" href="post.php">Articles</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="index.php">Retour</a>
+            <a class="nav-link" href="../index.php">Retour</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../form/deconnexion.php">Déconnexion</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="member.php"><?php echo $_SESSION['user']?></a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
-
+  
   <!-- Page Header -->
-  <img class="background" src="img/IoHSn9Z.png">
+  <img class="background" src="../img/IoHSn9Z.png">
+  

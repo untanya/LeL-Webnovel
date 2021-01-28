@@ -3,6 +3,7 @@
     if(!isset($_SESSION['user']))
         header('Location: ../form/form.php');
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -58,16 +59,10 @@
           <li class="nav-item">
             <a class="nav-link" href="member.php"><?php echo $_SESSION['user']?></a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../form/deconnexion.php">Déconnexion</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="member.php"><?php echo $_SESSION['user']?></a>
-          </li>
         </ul>
       </div>
     </div>
   </nav>
-
+  
   <!-- Page Header -->
-  <img class="background" src="../img/IoHSn9Z.png">
+  <!-- <img class="background" src="../img/IoHSn9Z.png"> -->
