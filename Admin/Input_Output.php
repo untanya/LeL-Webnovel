@@ -64,4 +64,4 @@
   </nav>
 
   <!-- Page Header -->
-  <!-- <img class="background" src="../img/IoHSn9Z.png"> -->
+  <img class="background" src="../img/IoHSn9Z.png">
