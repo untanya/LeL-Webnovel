@@ -7,7 +7,7 @@
         $email = htmlspecialchars($_POST['email']);
         $password = htmlspecialchars($_POST['password']);
 
-        $check = $bdd->prepare('SELECT pseudo, email, password FROM users WHERE email = ?');
+        $check = $bdd->prepare('SELECT pseudo, email, password, roles_lvl FROM users WHERE email = ?');
         $check->execute(array($email));
         $data = $check->fetch();
         $row = $check->rowCount();
@@ -19,7 +19,7 @@
                 
                 if(password_verify($password, $data['password']))
                 {
-                    $_SESSION['user'] = $data['email'];
+                    $_SESSION['user'] = $data['pseudo'];
                     header('Location: ../Admin/AdminInterface.php');
                     die();
                 }else{ header('Location: form.php?login_err=password'); die(); }

@@ -67,6 +67,22 @@
 
                     }
                 }
+
+                if(isset($_GET['reg_succes']))
+                {
+                    $err = htmlspecialchars($_GET['reg_succes']);
+
+                    switch($err)
+                    {
+                        case 'succes':
+                            ?>
+                                <div class="alert alert-succes">
+                                    <strong>Succès</strong> Vous allez être redirigé vers la page de connexion !
+                                </div>
+                            <?php
+                            break;
+                    }
+                }
                 ?>
             
             <form action="inscription_traitement.php" method="post">
@@ -122,4 +138,5 @@
             width: 100%;
         }
 </style>
+
 </html>

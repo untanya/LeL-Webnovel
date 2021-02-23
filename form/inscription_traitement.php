@@ -34,7 +34,7 @@
 
                             header('Location:inscription.php?reg_err=success');
                             if (time_nanosleep(0, 500000000) === true) {
-                                header('Location: form.php');
+                                header('Location: form.php?reg_succes=succes');
                                 }
                             die();
                         }else{ header('Location: inscription.php?reg_err=password'); die();}
