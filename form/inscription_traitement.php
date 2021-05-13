@@ -22,14 +22,14 @@
                             $cost = ['cost' => 12];
                             $password = password_hash($password, PASSWORD_BCRYPT, $cost);
                             
-                            $ip = $_SERVER['REMOTE_ADDR'];
+                            // $ip = $_SERVER['REMOTE_ADDR'];
 
                             $insert = $bdd->prepare('INSERT INTO users(pseudo, email, password, roles_lvl) VALUES(:pseudo, :email, :password, :roles_lvl)');
                             $insert->execute(array(
                                 'pseudo' => $pseudo,
                                 'email' => $email,
                                 'password' => $password,
-                                'roles_lvl' => 1
+                                'roles_lvl' => 0
                             ));
 
                             header('Location:inscription.php?reg_err=success');

@@ -57,7 +57,7 @@
                 <div class="form-group">
                     <button type="submit" class="btn btn-primary btn-block">Connexion</button>
                 </div>
-                <p class="text-center"><a href="inscription.php">Inscription</a></p>   
+                <p class="text-center"> Si vous n'avez pas de compte, <a href="inscription.php">inscrivez-vous </a> !</p>   
             </form>
             
         </div>

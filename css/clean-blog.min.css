@@ -18,7 +18,7 @@
 
 img{
     background-image: url('../img/IoHSn9Z.png');
-    position:absolute;
+    /* position:absolute; */
     top:0;
     left:0;
     height:100%;
@@ -36,6 +36,21 @@ img{
 h1.p-5 {
     margin: 70px;
 }
+
+/* ::placeholder{
+    color: #ccc;
+} */
+
+@media screen and (max-width:400px){
+    #oeuvreImg{
+        width: 100%;
+    }
+}
+
+#genre{
+    width: 25%;
+}
+
 
 p{
     line-height:1.5;
@@ -55,6 +70,8 @@ a{
     color:white;
     transition:all .2s
 }
+
+
 
 a:focus,a:hover{
     color:#0085a1
@@ -112,6 +129,10 @@ blockquote{
     font-weight:800;
     letter-spacing:1px;
     text-transform:uppercase
+}#mainNav .navbar-nav>li.hide-nav-item>a{
+    display: none !important;
+}#mainNav .navbar-nav>li.dropdown>a{
+    background-color: #1c1c1c;
 }@media only screen and (min-width:992px){
     #mainNav{
         border-bottom:1px solid transparent;
@@ -255,7 +276,7 @@ blockquote{
     box-shadow:none!important;
     font-family:Lora,'Times New Roman',serif
 }.floating-label-form-group input::-webkit-input-placeholder,.floating-label-form-group textarea::-webkit-input-placeholder{
-    color:#868e96;
+    color:#fff;
     font-family:Lora,'Times New Roman',serif
 }.floating-label-form-group label{
     font-size:.85em;

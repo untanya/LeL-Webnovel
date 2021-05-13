@@ -1,7 +1,9 @@
 <?php 
-    session_start();
-    if(!isset($_SESSION['user']))
+    session_start(); 
+    require_once '../menu-traitement.php';
+    if($_SESSION['roles_lvl'] != '1')
         header('Location: ../form/form.php');
+    
 ?>
 
 <!DOCTYPE html>
@@ -45,25 +47,65 @@
             <a class="nav-link" href="data.php">Database</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="Input_Output.php">Chapitres</a>
-          </li>
-          <li class="nav-item">
             <a class="nav-link" href="post.php">Articles</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="../index.php">Retour</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../form/deconnexion.php">Déconnexion</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="member.php"><?php echo $_SESSION['user']?></a>
-          </li>
+          <?php echo $out;?>
         </ul>
       </div>
     </div>
   </nav>
   
+</body>
+
+<body>
+  
   <!-- Page Header -->
-  <img class="background" src="../img/IoHSn9Z.png">
+  <!-- <header class="masthead">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-12 mx-auto">
+          <div class="site-heading">
+            <h1>Formulaires</h1>
+            <span class="subheading">Pour ajouter, supprimer des oeuvres/chapitres</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header> -->
+
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('https://i.imgur.com/IoHSn9Z.jpg')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="site-heading">
+            <h1>Webreader</h1>
+            <span class="subheading"><a href="addOeuvre-form.php" class="btn btn-outline-primary" aria-pressed="true">Formulaire d'ajout d'oeuvre</a></span>
+            <span class="subheading"><a href="addChapter-form.php" class="btn btn-outline-primary" aria-pressed="true">Formulaire d'ajout de chapitre</a></span>
+            <span class="subheading"><a href="addPost-form.php" class="btn btn-outline-primary" aria-pressed="true">Formulaire d'ajout de post</a></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <!-- <img id="background" src="../img/IoHSn9Z.png"> -->
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="../vendor/jquery/jquery.min.js"></script>
+  <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="../js/clean-blog.min.js"></script>
+  <!-- <script src="login.php"></script> -->
+
+
+</body>
+</html>
   

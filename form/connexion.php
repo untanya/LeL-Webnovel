@@ -12,6 +12,11 @@
         $data = $check->fetch();
         $row = $check->rowCount();
 
+        $query = $bdd->prepare('SELECT email, roles_lvl FROM users WHERE email = ?');
+        $query->execute(array($email));
+        $user = $query->fetchAll();
+        $roles_lvl = '1';
+        
         if($row == 1)
         {
             if(filter_var($email, FILTER_VALIDATE_EMAIL))
@@ -20,9 +25,23 @@
                 if(password_verify($password, $data['password']))
                 {
                     $_SESSION['user'] = $data['pseudo'];
-                    header('Location: ../Admin/AdminInterface.php');
-                    die();
+
+                    foreach($user as $value)
+                    {
+                        
+                        if($user['roles_lvl'] == $roles_lvl)
+                        {
+                            
+                            $_SESSION['roles_lvl'] = $user['roles_lvl'];
+                            
+                            header('Location: ../Admin/AdminInterface.php');
+                            die();
+                        }else{header('Location: ../index.php'); die();}
+                    }
                 }else{ header('Location: form.php?login_err=password'); die(); }
             }else{ header('Location: form.php?login_err=email'); die(); }
         }else{ header('Location: form.php?login_err=already'); die(); }
     }
+
+
+?>

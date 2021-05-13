@@ -1,5 +1,6 @@
 <?php 
     session_start();
+    require_once '../menu-traitement.php';
     if(!isset($_SESSION['user']))
         header('Location: ../form/form.php');
 ?>
@@ -44,26 +45,12 @@
             <a class="nav-link" href="data.php">Database</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="Input_Output.php">Chapitres</a>
-          </li>
-          <li class="nav-item">
             <a class="nav-link" href="post.php">Articles</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="../index.php">Retour</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../form/deconnexion.php">Déconnexion</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="member.php"><?php echo $_SESSION['user']?></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../form/deconnexion.php">Déconnexion</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="member.php"><?php echo $_SESSION['user']?></a>
-          </li>
+          <?php echo $out;?>
         </ul>
       </div>
     </div>

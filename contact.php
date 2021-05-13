@@ -1,3 +1,6 @@
+<?php
+  include 'menu-traitement.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -47,10 +50,14 @@
           <li class="nav-item">
             <a class="nav-link" href="contact.php">Contact</a>
           </li>
+          <?php echo $out;?>
         </ul>
       </div>
     </div>
   </nav>
+
+</body>
+<body>
 
   <!-- Page Header -->
   <header class="masthead" style="background-image: url('img/contact-bg.jpg')">
@@ -71,43 +78,10 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
-        <p>Vous voulez nous poser des questions ? C'est possible de nous contactez, vous avez qu'à remplir ce formulaire</p>
-        <!-- Contact Form - Enter your email address on line 19 of the mail/contact_me.php file to make this form work. -->
-        <!-- WARNING: Some web hosts do not allow emails to be sent through forms to common mail hosts like Gmail or Yahoo. It's recommended that you use a private domain email address! -->
-        <!-- To use the contact form, your site must be on a live web host with PHP! The form will not work locally! -->
-        <form name="sentMessage" id="contactForm" novalidate>
-          <div class="control-group">
-            <div class="form-group floating-label-form-group controls">
-              <label>Pseudo</label>
-              <input type="text" class="form-control" placeholder="Pseudo" id="name" required data-validation-required-message="Entez votre pseudo.">
-              <p class="help-block text-danger"></p>
-            </div>
-          </div>
-          <div class="control-group">
-            <div class="form-group floating-label-form-group controls">
-              <label>Email</label>
-              <input type="email" class="form-control" placeholder="Email" id="email" required data-validation-required-message="Entrez votre adresse Email.">
-              <p class="help-block text-danger"></p>
-            </div>
-          </div>
-          <!-- <div class="control-group">
-            <div class="form-group col-xs-12 floating-label-form-group controls">
-              <label>Phone Number</label>
-              <input type="tel" class="form-control" placeholder="Phone Number" id="phone" required data-validation-required-message="Please enter your phone number.">
-              <p class="help-block text-danger"></p>
-            </div>
-          </div> -->
-          <div class="control-group">
-            <div class="form-group floating-label-form-group controls">
-              <label>Message</label>
-              <textarea rows="5" class="form-control" placeholder="Message" id="message" required data-validation-required-message="Entrez votre message."></textarea>
-              <p class="help-block text-danger"></p>
-            </div>
-          </div>
-          <br>
-          <div id="success"></div>
-          <button type="submit" class="btn btn-primary" id="sendMessageButton">Envoyez</button>
-        </form>
+        <p>Vous voulez nous poser des questions ? Vous n'avez qu'à rejoindre notre serveur discord :</p>
+        <div class="d-grid gap-2 col-4 mx-auto">
+          <a href="https://discord.gg/mfzYRTV" class="btn btn-outline-primary" aria-pressed="true">Notre Discord</a>
+        </div>
       </div>
     </div>
   </div>
@@ -115,36 +89,7 @@
   <hr>
 
   <!-- Footer -->
-  <footer>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
-          <ul class="list-inline text-center">
-            <li class="list-inline-item">
-              <a href="#">
-                <span class="fa-stack fa-lg">
-                  <i class="fas fa-circle fa-stack-2x"></i>
-                  <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
-                </span>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a href="#">
-                <span class="fa-stack fa-lg">
-                  <i class="fas fa-circle fa-stack-2x"></i>
-                  <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
-                </span>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a href="#">
-                <span class="fa-stack fa-lg">
-                  <i class="fas fa-circle fa-stack-2x"></i>
-                  <i class="fab fa-github fa-stack-1x fa-inverse"></i>
-                </span>
-              </a>
-            </li>
-          </ul>
+  <?php echo $footer;?>
           <p class="copyright text-muted">Copyright &copy; Webreader 2020</p>
         </div>
       </div>
@@ -157,7 +102,6 @@
 
   <!-- Contact Form JavaScript -->
   <script src="js/jqBootstrapValidation.js"></script>
-  <script src="js/contact_me.js"></script>
 
   <!-- Custom scripts for this template -->
   <script src="js/clean-blog.min.js"></script>
