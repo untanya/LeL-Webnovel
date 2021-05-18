@@ -16,7 +16,7 @@
       {
         $_SESSION['roles_lvl'] = $value['roles_lvl'];
         
-        if($_SERVER['REQUEST_URI'] == '/LeL%20Webnovel/Admin/AdminInterface.php' )
+        if($_SERVER['PHP_SELF'] == '/Admin/AdminInterface.php')
         {
           //|| '/LeL%20Webnovel/Admin/data.php' || '/LeL%20Webnovel/Admin/member.php' || '/LeL%20Webnovel/Admin/post.php'
           $out = '<li class="nav-item dropdown">

@@ -133,7 +133,7 @@
                 case 'disallowImgType':
                 ?>
                     <div class="alert alert-danger">
-                        <strong>Erreur</strong> l'extension de l'image n'est pas un JPG, GIF, BMP ou un PNG, veuillez mettre une image avec une de ces extensions !
+                        <strong>Erreur</strong> soit l'extension de l'image n'est pas un JPG, GIF, BMP ou un PNG, donc veuillez mettre une image avec une de ces extensions ! Soit vous n'avez pas mis d'image !
                     </div>
                 <?php
 
@@ -160,6 +160,7 @@
                         </div>
                     <?php
                 break;
+                
 
                 case 'already':
                     ?>

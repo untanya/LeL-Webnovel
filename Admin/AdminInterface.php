@@ -1,5 +1,5 @@
 <?php 
-    session_start(); 
+    // session_start(); 
     require_once '../menu-traitement.php';
     if($_SESSION['roles_lvl'] != '1')
         header('Location: ../form/form.php');
