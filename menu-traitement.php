@@ -1,5 +1,6 @@
 <?php
   require_once 'form/connexion.php';
+  // var_dump($_SERVER['PHP_SELF']);
   
   if(isset($_SESSION['user'])) // Regarde si la session user est présente
   {
@@ -16,9 +17,10 @@
       {
         $_SESSION['roles_lvl'] = $value['roles_lvl'];
         
-        if($_SERVER['PHP_SELF'] == '/Admin/AdminInterface.php')
+        $adress_page = substr($_SERVER['PHP_SELF'], 14);
+
+        if($adress_page == 'Admin/AdminInterface.php'|| $adress_page == 'Admin/data.php' || $adress_page == 'Admin/post.php' )
         {
-          //|| '/LeL%20Webnovel/Admin/data.php' || '/LeL%20Webnovel/Admin/member.php' || '/LeL%20Webnovel/Admin/post.php'
           $out = '<li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" aria-haspopup="true" href="" data-toggle="dropdown">' . $username . '</a>
           <div class="dropdown-menu">

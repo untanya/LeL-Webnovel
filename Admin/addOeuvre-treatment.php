@@ -1,7 +1,7 @@
 <?php
     require_once '../form/config.php';
 
-    if(isset($_FILES['oeuvreImg']) && isset($_POST['oeuvreName']) && isset($_POST['auteur']) && isset($_POST['anneeVO']) && isset($_POST['sourceVoName']) && isset($_POST['linkVO']) && isset($_POST['sourceTrad']) && isset($_POST['statutVO']) && isset($_POST['statutVUS']) && isset($_POST['genre']) && isset($_POST['synopsis']))
+    if(isset($_FILES['oeuvreImg']) && isset($_POST['oeuvreName']) && isset($_POST['auteur']) && isset($_POST['statutNovel']) && isset($_POST['anneeVO']) && isset($_POST['sourceVoName']) && isset($_POST['linkVO']) && isset($_POST['sourceTrad']) && isset($_POST['statutVO']) && isset($_POST['statutVUS']) && isset($_POST['genre']) && isset($_POST['synopsis']))
     {
         $oeuvreImg = $_FILES['oeuvreImg']['name'];
         $img_loc = $_FILES['oeuvreImg']['tmp_name'];
@@ -20,6 +20,7 @@
         $upload_dir = "../series/$oeuvreName/afficheImg/";
 
         $auteur = htmlspecialchars($_POST['auteur']);
+        $statutNovel = htmlspecialchars($_POST['statutNovel']);
         $anneeVO = htmlspecialchars($_POST['anneeVO']);
         $sourceVoName = htmlspecialchars($_POST['sourceVoName']);
         $linkVO = htmlspecialchars($_POST['linkVO']);
@@ -51,11 +52,12 @@
                                                                 
                                                                 if(move_uploaded_file($img_loc,$upload_dir . $filename)){
                                                                     
-                                                                    $insert = $bdd->prepare('INSERT INTO oeuvre(affiche, oeuvreName, auteur, anneeVO, sourceVoName, linkVO, sourceTrad, statutVO, statutVUS, genre, synopsis) VALUES(:affiche, :oeuvreName, :auteur, :anneeVO, :sourceVoName, :linkVO, :sourceTrad, :statutVO, :statutVUS, :genre, :synopsis)');
+                                                                    $insert = $bdd->prepare('INSERT INTO oeuvre(affiche, oeuvreName, auteur, statutNovel, anneeVO, sourceVoName, linkVO, sourceTrad, statutVO, statutVUS, genre, synopsis) VALUES(:affiche, :oeuvreName, :auteur, :statutNovel, :anneeVO, :sourceVoName, :linkVO, :sourceTrad, :statutVO, :statutVUS, :genre, :synopsis)');
                                                                     $insert->execute(array(
                                                                         'affiche' => $filename,
                                                                         'oeuvreName' => $oeuvreName,
                                                                         'auteur' => $auteur,
+                                                                        'statutNovel' => $statutNovel,
                                                                         'anneeVO' => $anneeVO,
                                                                         'sourceVoName' => $sourceVoName,
                                                                         'linkVO' => $linkVO,

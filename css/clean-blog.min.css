@@ -33,6 +33,7 @@ img{
     align-items: center;
     
 }
+
 h1.p-5 {
     margin: 70px;
 }
@@ -47,9 +48,9 @@ h1.p-5 {
     }
 }
 
-#genre{
+/* #genre{
     width: 25%;
-}
+} */
 
 
 p{

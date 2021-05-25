@@ -1,5 +1,5 @@
 <?php 
-    session_start();
+    // session_start();
     require_once '../menu-traitement.php';
     if(!isset($_SESSION['user']))
         header('Location: ../form/form.php');
